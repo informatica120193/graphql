@@ -1,0 +1,38 @@
+
+entity Applicant {
+	surname String,
+    firstName String,
+    birthDate Instant,
+    sex String,
+    telephone String
+}
+
+entity Address {
+	street String,
+    houseNumber String,
+    zipCode String,
+    residence String
+}
+
+entity Candidate {
+	registerDate Instant
+}
+
+entity Member {
+	commencementDate Instant
+}
+
+entity Invoce {
+	date Instant,
+    value Long
+}
+
+relationship OneToOne {
+	Candidate{applicant} to Applicant,
+    Member{candidate} to Candidate
+}
+
+relationship ManyToOne {
+    Invoce to Member{invoce},
+    Applicant to Address{applicant}
+}
