@@ -1,0 +1,36 @@
+{
+    "name": "Member",
+    "fields": [
+        {
+            "fieldName": "commencementDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "candidate",
+            "otherEntityRelationshipName": "member",
+            "relationshipName": "candidate",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "invoce",
+            "otherEntityRelationshipName": "member",
+            "relationshipName": "invoce"
+        }
+    ],
+    "changelogDate": "20200321232700",
+    "entityTableName": "member",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

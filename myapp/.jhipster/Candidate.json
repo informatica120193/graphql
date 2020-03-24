@@ -1,0 +1,30 @@
+{
+    "name": "Candidate",
+    "fields": [
+        {
+            "fieldName": "registerDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "applicant",
+            "otherEntityRelationshipName": "candidate",
+            "relationshipName": "applicant",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200321232600",
+    "entityTableName": "candidate",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
